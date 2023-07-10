@@ -25,6 +25,23 @@ function addPieces(rows, cols) {
         }
     }
     console.log(board);
+
+
+}
+
+// Update player boxes to show whose turn it is
+function updatePlayerBox() {
+    console.log("Turn: " + turn);
+    if (turn === 1)
+    {
+        document.getElementById("p2").style.backgroundColor = "rgba(255, 255, 0, 0)";
+        document.getElementById("p1").style.backgroundColor = "rgba(255, 0, 0, 1)";
+    }
+    else
+    {
+        document.getElementById("p2").style.backgroundColor = "rgba(255, 255, 0, 1)";
+        document.getElementById("p1").style.backgroundColor = "rgba(255, 0, 0, 0)";
+    }
 }
 
 // Update the HTML to display the current status of the board
@@ -62,6 +79,7 @@ function displayBoard() {
 }
 
 // Runs whenever a piece is clicked
+// Checks if position is available and places a piece if it is
 function takeTurn(col) {
     for (let r = board.length - 1; r >= 0; r--)
     {
@@ -88,6 +106,7 @@ function takeTurn(col) {
                 {
                     turn = 1;
                 }
+                updatePlayerBox();
                 return;
             }
         }
@@ -212,5 +231,6 @@ function check() {
 
 addPieces(6, 7);
 displayBoard();
+updatePlayerBox();
 
 
