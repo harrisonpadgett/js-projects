@@ -63,8 +63,6 @@ function displayBoard() {
 
 // Runs whenever a piece is clicked
 function takeTurn(col) {
-    console.log(col);
-
     for (let r = board.length - 1; r >= 0; r--)
     {
         for(let c = 0; c < board[r].length; c++)
