@@ -19,3 +19,21 @@
     border-radius: 50%;
     display: inline-block;
 }
+
+.red-piece {
+    height: 90px;
+    width: 90px;
+    margin: 5px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.yellow-piece {
+    height: 90px;
+    width: 90px;
+    margin: 5px;
+    background-color: rgb(255, 230, 0);
+    border-radius: 50%;
+    display: inline-block;
+}
